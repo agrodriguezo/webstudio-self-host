@@ -182,6 +182,7 @@ services:
       - "traefik.http.routers.ws-canvas.service=ws-canvas-svc"
       - "traefik.http.routers.ws-canvas.middlewares=gzip"
       - "traefik.http.services.ws-canvas-svc.loadbalancer.server.port=3000"
+      - "traefik.http.routers.https-0-c2up75yzg5uwwzhx6sg8ihns-app.tls.certresolver=cloudflare"
 
   # ── Self-hosted publisher ────────────────────────────────────────────────────
   # Port 4000 (internal): build API — receives publish requests from the builder.
